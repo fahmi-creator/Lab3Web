@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HTML Lanjutan</title>
+</head>
+<body>
+ 
+	<style type="text/css">
+	html,body{
+        background-color: #00ff2a;
+		padding: 0;
+		margin:0;
+		font-family: sans-serif;
+	}
+ 
+	.menu{
+		background-color: #ff0015;
+	}
+ 
+	.menu ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+	}
+ 
+	.menu > ul > li {
+		float: left;
+	}
+ 
+	
+	.menu li a {
+		display: inline-block;
+		color: rgb(20, 1, 1);
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+ 
+	.menu li a:hover{
+		background-color: #00ff00;
+	}
+ 
+	li.dropdown {
+		display: inline-block;
+	}
+ 
+	.dropdown:hover .isi-dropdown {
+		display: block;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: rgba(22, 2, 2, 0.925) !important;
+	}
+ 
+	.isi-dropdown {
+		position: absolute;
+		display: none;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+		background-color: #1606f7;
+	}
+ 
+	.isi-dropdown a {
+		color: #3c3c3c !important;
+	}
+ 
+	.isi-dropdown a:hover {
+		color: #232323 !important;
+		background: #07f513 !important;
+	}
+</style>
+ 
+ 
+<header class="header">
+	<div class="menu">
+ 
+		<ul>
+			<li><a href="lab3_Tugas.html">CONTOH DROPDOWN </a></li>
+			<li class="dropdown"><a href="#">DAFTAR MENU MINUMAN</a>
+				<ul class="isi-dropdown">
+					<li><a href=>Kopi Hitam</a></li>
+					<li><a href=>Es Teh manis</a></li>
+					<li><a href=>Jeruk Panas</a></li>
+				</ul>
+			</li>
+		</ul>
+ 
+	</div>
+</header>
+<center>
+	<h1>Membuat Menu Dropdown dan Listbox</br> Tugas pemrograman web ke 3</h1>
+</center>
+<h4>CONTOH LISTBOX</h4>
+<form action="proses.php" method="get">
+    <p>Menu Makanan
+    <select name='Menu Makanan' multiple='multiple'>
+      <option value='Nasi Goreng'>Nasi Goreng</option>
+      <option value='Ketoprak' selected='selected'>Ketoprak</option>
+      <option value='Mie Goreng'>Mie Goreng</option>
+      <option value='Nasi Rames'>Nasi Rames</option>
+      <option value='Mie Rebus'>Mie rebus</option>
+    </select>
+    </p>
+    <input type='submit' name='tombol' value='kirim' />
